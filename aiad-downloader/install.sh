@@ -49,7 +49,7 @@ CLONE_DIRECTORY="$DIRECTORY/Data"
 CLONE_URL=https://github.com/an-image-a-day/an-image-a-day.git
 
 if ! command -v brew >/dev/null; then
-
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 INSTALL_WITH_BREW=()
