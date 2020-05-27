@@ -63,21 +63,27 @@ if ! [[ "$DATE" =~ ^[0-9]{4}/[0-9]{2}/[0-9]{2}$ ]]; then
   exit 1
 fi
 
-FILENAME=`echo "$WALLPAPERS_DATABASE"/"$CHANNEL"/"$DATE"*.json`
-if ! [[ -f "$FILENAME" ]]; then
-  >&2 echo "error: file \"$FILENAME\" not found."
+SPEC_FILENAME=`echo "$WALLPAPERS_DATABASE"/"$CHANNEL"/"$DATE"*.json`
+if ! [[ -f "$SPEC_FILENAME" ]]; then
+  >&2 echo "error: file \"$SPEC_FILENAME\" not found."
   exit 1
 fi
 
-IMAGE_URL=`cat "$FILENAME" | jq '.resolution_aliases."'"$RESOLUTION"'".image_url' -r`
-FILENAME=`cat "$FILENAME" | jq '.resolution_aliases."'"$RESOLUTION"'".filename' -r`
-if [ "$IMAGE_URL" == "null" ]; then
-  >&2 echo "error: no image_url for resolution \"$RESOLUTION\" in \"$FILENAME\"."
-  exit 1
-fi
-if [ "$FILENAME" == "null" ]; then
-  >&2 echo "error: no filename for resolution \"$RESOLUTION\" in \"$FILENAME\"."
-  exit 1
+get_image_url_and_filename() {
+  local RESOLUTION="$1"
+  IMAGE_URL=`cat "$SPEC_FILENAME" | jq '.resolution_aliases."'"$RESOLUTION"'".image_url' -r`
+  FILENAME=`cat "$SPEC_FILENAME" | jq '.resolution_aliases."'"$RESOLUTION"'".filename' -r`
+  if [ "$IMAGE_URL" == "null" ] || [ "$FILENAME" == "null" ]; then
+    return 1
+  fi
+  return 0
+}
+
+if ! get_image_url_and_filename "$RESOLUTION"; then
+  if ! get_image_url_and_filename "2K"; then
+    >&2 echo "error: no matching image for resolutions \"$RESOLUTION\" and \"2K\" in \"$SPEC_FILENAME\"."
+    exit 1
+  fi
 fi
 
 FILENAME="${DATE//\//-}-$FILENAME"
