@@ -42,6 +42,8 @@ Use the CLI from the project root directory to save wallpaper specs into the dat
 | ---- | ------ | ----- |
 | [Pexels](https://pexels.com) | Complete | Expects to find a `PEXELS_TOKEN` environment variable. |
 | [WallpapersHome](https://wallpapershome.com/) | Complete | |
+| [DeviantArt](https://www.deviantart.com/) | Planned | |
+| [ArtStation](https://www.artstation.com/) | Planned | |
 
 ---
 
