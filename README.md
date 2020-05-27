@@ -14,7 +14,7 @@ to perform a full installation of all dependencies (this includes Homebrew and v
 packages).
 
 ```
-/bin/bash -c "$(curl https://raw.githubusercontent.com/an-image-a-day/an-image-a-day/master/aiad-downloader/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/an-image-a-day/an-image-a-day/master/aiad-downloader/install.sh)"
 ```
 
 The daily image will be available in the `Home > Pictures > An Image a Day > Today` directory
