@@ -1,16 +1,16 @@
-name: On Pull Request
+name: On Push
 
 on:
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
-  validate-wallpapers:
+  render-gh-pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
     - name: Set up Python 3.5
       uses: actions/setup-python@v2
       with:
@@ -19,7 +19,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pushd aiad-ci && pip install -r requirements.txt && popd
-    - name: Validate Wallpaper Specs
+    - name: Render channels HTML page
       run: |
-        git checkout $GITHUB_BASE_REF -q && git checkout $GITHUB_HEAD_REF -q
-        python aiad-ci/validate-wallpapers.py $GITHUB_BASE_REF..$GITHUB_HEAD_REF
+        git checkout --orphan gh-pages
+        python aiad-ci/render-channel-html-page.py >index.html
+        git add index.html
+        git push origin gh-pages --force
