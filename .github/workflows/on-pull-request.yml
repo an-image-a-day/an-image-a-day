@@ -22,6 +22,7 @@ jobs:
         pushd aiad-ci && pip install -r requirements.txt && popd
     - name: Validate Wallpaper Specs
       run: |
+        git fetch
         git checkout master
         git checkout $GITHUB_HEAD_REF
         git diff --name-only $GITHUB_BASE_REF..$GITHUB_HEAD_REF
