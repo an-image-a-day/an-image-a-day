@@ -5,6 +5,7 @@ curated manually from one of the below sources and recorded in JSON format in th
 directory. 
 
 * [Pexels](https://www.pexels.com/)
+* [Unsplash](https://unsplash.com/)
 * [WallpapersHome](https://wallpapershome.com/)
 
 ## Getting started
