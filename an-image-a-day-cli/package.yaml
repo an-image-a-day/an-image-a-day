@@ -11,6 +11,7 @@ requirements:
   - nr.interface ~0.0.2
   - nr.proxy ~0.0.2
   - requests ^2.23.0
+  - termcolor ^1.1.0
 entrypoints:
   an_image_a_day.resolvers:
     - pexels = an_image_a_day.resolvers.pexels:PexelsWallpaperSpecResolver
