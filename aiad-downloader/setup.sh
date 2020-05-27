@@ -75,11 +75,11 @@ CURLPATH="$(dirname `which curl`)"
 GITPATH="$(dirname `which git`)"
 
 echo "Updating crontab ..."
-CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && an-image-a-day-downloader/downloader.sh -q -D \"$DIRECTORY\" -c \"$CHANNEL\""
-CRONTAB=$(crontab -l | grep -v an-image-a-day)
+CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && aiad-downloader/downloader.sh -q -D \"$DIRECTORY\" -c \"$CHANNEL\""
+CRONTAB=$(crontab -l | grep -v an-image-a-day | grep -v aiad-downloader)
 CRONTAB="$CRONTAB
 
-# Registered by an-image-a-day/an-image-a-day-downloader/setup.sh
+# Registered by an-image-a-day/aiad-downloader/setup.sh
 $SCHEDULE $CRON_COMMAND"
 echo "$CRONTAB" | crontab
 

@@ -1,31 +1,42 @@
 # An Image a Day
 
-This repository is a database of desktop wallpapers, one for each day of the year. Images are
-selected manually and recorded in the `Wallpapers/` database from the following sources:
+This repository is a database of desktop wallpapers, one for each day of the year. The images are
+curated manually from one of the below sources and recorded in JSON format in the `Wallpapers/`
+directory. 
 
-* [Pexels](https://pexels.com)
+* [Pexels](https://www.pexels.com/)
+* [WallpapersHome](https://wallpapershome.com/)
 
-### How can I use this?
+## Getting started
 
-* <details><summary>Instructions for OSX</summary>
+We currently target OSX as the main platform. Mac users can run the following in the Terminal
+to perform a full installation of all dependencies (this includes Homebrew and various brew
+packages).
 
-    1. Run `curl https://raw.githubusercontent.com/an-image-a-day/an-image-a-day/master/an-image-a-day-downloader/setup.sh | bash` in your Terminal
-    2. Pick `Pictures/An Image a Day/Today` as the directory for your desktop wallpaper:
+```
+curl https://raw.githubusercontent.com/an-image-a-day/an-image-a-day/master/aiad-downloader/setup.sh | bash
+```
 
-    <p align="center"><img src="https://user-images.githubusercontent.com/1318438/82971508-21ab1f00-9fd3-11ea-8d05-2b72340ce6d8.png"></p>
+The daily image will be available in the `Home > Pictures > An Image a Day > Today` directory
+and should be set as the source for your desktop wallpaper on every desktop.
 
-    </details>
+<p align="center"><img src="https://user-images.githubusercontent.com/1318438/82971508-21ab1f00-9fd3-11ea-8d05-2b72340ce6d8.png"></p>
 
-* Other operating systems are not currently supported by the setup script.
+## Can I contribute?
 
-### Can I contribute?
+You are most welcome to contribute! If you are not a developer, you can become an **image curator**.
 
-Yes! You can contribute wallpapers for upcoming calendar days or even create a new Wallpaper
-channel. Simply create a Pull Request on this repository.
+#### Curating wallpapers
 
-Wallpaper records are stored in the `Wallpapers/` directory following the layout
-`Channel/YYYY/MM/DD.json`. While the records can be authored by hand, it is much easier
-to automatically generate them with the [an-image-a-day-cli](an-image-a-day-cli).
+While the wallpaper metadata in the `Wallpapers/` folder can be created manually, it is much more
+convenient to use the [aiad-cli](aiad-cli) and feed it with links from one of the supported
+wallpaper providers.
+
+```
+aiad-cli save https://www.pexels.com/photo/vehicles-on-road-near-lampposts-1689882/
+```
+
+For details on how to install and use aiad-cli, check out the [Readme](aiad-cli/README.md).
 
 ---
 

@@ -23,7 +23,7 @@
 Logic that manages the Wallpapers database directory.
 """
 
-from an_image_a_day.core import WallpaperSpec
+from aiad_cli.core import WallpaperSpec
 from typing import Iterable, List
 import builtins
 import datetime

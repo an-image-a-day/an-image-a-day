@@ -1,8 +1,8 @@
-name: "an-image-a-day"
+name: "aiad-cli"
 version: "0.0.1"
 author: "Niklas Rosenstein <rosensteinniklas@gmail.com>"
 license: "MIT"
-description: "Package description here."
+description: "CLI to manage the An Image a Day Wallpaper database."
 requirements:
   - python ^3.4
   - beautifulsoup4 ^4.9.1
@@ -14,8 +14,8 @@ requirements:
   - requests ^2.23.0
   - termcolor ^1.1.0
 entrypoints:
-  an_image_a_day.resolvers:
-    - pexels = an_image_a_day.resolvers.pexels:PexelsWallpaperSpecResolver
-    - wallpapershome = an_image_a_day.resolvers.wallpapershome:WallpapersHomeSpecResolver
+  aiad_cli.resolvers:
+    - pexels = aiad_cli.resolvers.pexels:PexelsWallpaperSpecResolver
+    - wallpapershome = aiad_cli.resolvers.wallpapershome:WallpapersHomeSpecResolver
   console_scripts:
-    - an-image-a-day = an_image_a_day.__main__:cli
+    - aiad-cli = aiad_cli.__main__:cli

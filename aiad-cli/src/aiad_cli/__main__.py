@@ -19,9 +19,9 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from an_image_a_day.core import WallpaperSpec
-from an_image_a_day.database import WallpapersDatabase
-from an_image_a_day.resolvers import resolve_url
+from aiad_cli.core import WallpaperSpec
+from aiad_cli.database import WallpapersDatabase
+from aiad_cli.resolvers import resolve_url
 from nr.proxy import Proxy
 from typing import Optional
 import click

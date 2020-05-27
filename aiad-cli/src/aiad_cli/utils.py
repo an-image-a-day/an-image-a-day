@@ -19,19 +19,9 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from an_image_a_day.core import WallpaperSpec
-import pkg_resources
-
-ENTRYPOINT_NAME = __name__
+from aiad_cli import __version__
+import requests
 
 
-class UnresolvableUrlError(ValueError):
-  pass
-
-
-def resolve_url(url: str) -> WallpaperSpec:
-  for entry_point in pkg_resources.iter_entry_points(ENTRYPOINT_NAME):
-    resolver = entry_point.load()()
-    if resolver.match_url(url):
-      return resolver.resolve(url)
-  raise UnresolvableUrlError(url)
+def get_user_agent():
+  return 'An-Image-a-Day/' + __version__

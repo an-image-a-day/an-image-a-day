@@ -19,8 +19,8 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from an_image_a_day.core import ImageCredit, ImageWithResolution, IWallpaperSpecResolver, WallpaperSpec
-from an_image_a_day.utils import get_user_agent
+from aiad_cli.core import ImageCredit, ImageWithResolution, IWallpaperSpecResolver, WallpaperSpec
+from aiad_cli.utils import get_user_agent
 from nr.interface import implements, override
 import os
 import re
