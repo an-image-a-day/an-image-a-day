@@ -1,0 +1,80 @@
+{
+  "name": "gray bridge above body of water during golden hour photography",
+  "keywords": [
+    "sunrise",
+    "bridge",
+    "water",
+    "architecture",
+    "city"
+  ],
+  "source_url": "https://unsplash.com/photos/LgCj9qcrfhI",
+  "credit": {
+    "text": "This Photo was taken by Wade Meng on Unsplash.",
+    "author": "Wade Meng",
+    "author_url": "https://unsplash.com/@wademm3"
+  },
+  "resolutions": [
+    {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    {
+      "height": 720,
+      "width": 1080,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-1080-720./photo-1505699261378-c372af38134c"
+    },
+    {
+      "height": 267,
+      "width": 400,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-400-267./photo-1505699261378-c372af38134c"
+    },
+    {
+      "height": 133,
+      "width": 200,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-200-133./photo-1505699261378-c372af38134c"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    "FHD": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    "2K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    "4K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    },
+    "5K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.unsplash.com/photo-1505699261378-c372af38134c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "gray-bridge-above-body-of-water-during-golden-hour-photography-5760-3840./photo-1505699261378-c372af38134c"
+    }
+  }
+}
