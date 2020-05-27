@@ -25,7 +25,7 @@ jobs:
     - name: Validate Wallpaper Specs
       run: |
         #git fetch
-        #git checkout master
-        #git checkout $GITHUB_HEAD_REF
+        git checkout master
+        git checkout $GITHUB_HEAD_REF
         git diff --name-only $GITHUB_BASE_REF..$GITHUB_HEAD_REF
         python aiad-ci/validate-wallpapers.py $GITHUB_BASE_REF..$GITHUB_HEAD_REF
