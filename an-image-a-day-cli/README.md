@@ -2,6 +2,8 @@
 
 CLI to help generating wallpaper JSON records from URLs.
 
+__Synopsis__
+
 ```
 Usage: an-image-a-day [OPTIONS] COMMAND [ARGS]...
 
@@ -13,13 +15,33 @@ Commands:
   save     Resolve a URL and save it as the next daily wallpaper.
 ```
 
-__Supported URLs__
+### Installation & Usage
 
-* [Pexels](https://pexels.com) (requires a `PEXELS_TOKEN` environment variable to be set)
+Clone the repository
 
-__Roadmap__
+    $ git clone https://github.com/an-image-a-day/an-image-a-day
+    $ cd an-image-a-day
 
-* [WallpapersHome](https://wallpapershome.com/)
+Create a Python 3 virtual environment:
+
+    $ python3 -m venv .venv
+    $ . .venv/bin/activate
+
+Install the CLI into that environment:
+
+    $ pip install -e ./an-image-a-day-cli
+
+Use the CLI from the project root directory to save wallpaper specs into the database:
+
+    $ an-image-a-day save https://www.pexels.com/photo/4k-wallpaper-android-wallpaper-astro-astrology-1146134/ \
+        --keywords sky,night,stars
+
+### Supported URLs
+
+| Site | Status | Notes |
+| ---- | ------ | ----- |
+| [Pexels](https://pexels.com) | Complete | Expects to find a `PEXELS_TOKEN` environment variable. |
+| [WallpapersHome](https://wallpapershome.com/) | Planned | |
 
 ---
 
