@@ -1,23 +1,33 @@
 # An Image a Day
 
-This repository is a database of desktop wallpapers, one for each day of the year.
+This repository is a database of desktop wallpapers, one for each day of the year. Images are
+selected manually and recorded in the `Wallpapers/` database from the following sources:
 
-### How do I subscribe?
+* [Pexels](https://pexels.com)
 
-1. Run `curl https://pl.ntr/an-image-a-day | bash` in your Terminal
-2. Pick `Pictures/An Image a Day/Today` as the directory for your desktop wallpaper.
+### How can I use this?
 
-### How do I add new wallpapers?
+OSX is currently the main target platform.
 
-The wallpaper database consists of daily records in JSON format. The file layout is hierarchical
-based on the format `Wallpapers/<Channel>/<Year>/<Month>/<Day>.json`. While the JSON payloads can
-be managed manually, it is recommended to use the `an-image-a-day` CLI instead.
+1. Run `curl https://raw.githubusercontent.com/an-image-a-day/an-image-a-day/master/an-image-a-day-downloader/setup.sh | bash` in your Terminal
+2. Pick `Pictures/An Image a Day/Today` as the directory for your desktop wallpaper:
 
-> Check out the [Readme](an-image-a-day-cli/README.md) on the CLI for more details.
+<p align="center"><img src="https://user-images.githubusercontent.com/1318438/82971508-21ab1f00-9fd3-11ea-8d05-2b72340ce6d8.png"></p>
 
-Once you added new JSON records to the Wallpapers folder, all you need to do is create a
-pull request against this GitHub repository. As soon as it's merged, the wallpaper will
-be automatically detected by the `an-image-a-day-downloader` script.
+### Can I contribute?
+
+Yes! You can contribute wallpapers for upcoming calendar days or even create a new Wallpaper
+channel. Simply create a Pull Request on this repository.
+
+Wallpaper records are stored in the `Wallpapers/` directory following the layout
+`Channel/YYYY/MM/DD.json`. While the records can be authored by hand, it is much easier
+to automatically generate them with the `an-image-a-day` CLI.
+
+Example:
+
+    $ pipx install -e ./an-image-a-day-cli
+    $ an-image-a-day save https://www.pexels.com/photo/4k-wallpaper-android-wallpaper-astro-astrology-1146134/ \
+        --keywords sky,night,stars
 
 ---
 
