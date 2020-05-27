@@ -75,7 +75,7 @@ CURLPATH="$(dirname `which curl`)"
 GITPATH="$(dirname `which git`)"
 
 echo "Updating crontab ..."
-CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && an-image-a-day-downloader/downloader.sh -D \"$DIRECTORY\" -c \"$CHANNEL\""
+CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && an-image-a-day-downloader/downloader.sh -q -D \"$DIRECTORY\" -c \"$CHANNEL\""
 CRONTAB=$(crontab -l | grep -v an-image-a-day)
 CRONTAB="$CRONTAB
 
