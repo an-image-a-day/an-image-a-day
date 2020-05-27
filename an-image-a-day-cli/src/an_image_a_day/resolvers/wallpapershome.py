@@ -22,16 +22,19 @@
 from an_image_a_day.core import ImageCredit, ImageWithResolution, IWallpaperSpecResolver, WallpaperSpec
 from an_image_a_day.utils import get_user_agent
 from nr.interface import implements, override
+import bs4
 import os
+import posixpath
 import re
 import requests
 import urllib.parse
 
 
 @implements(IWallpaperSpecResolver)
-class PexelsWallpaperSpecResolver:
+class WallpapersHomeSpecResolver:
 
-  _regex = re.compile(r'^https://(?:www\.)?pexels.com/photo/([^/]+)-(\d+)/?$')
+  _regex = re.compile(r'^https://(?:www\.)?wallpapershome.com/.*/([^/]+)\-\d+\.html')
+  _bad_keywords = frozenset(['hd', 'fullhd', 'fhd', '2k', '4k', '5k', '8k', 'wide', 'wide screen'])
 
   @override
   def match_url(self, url: str) -> bool:
@@ -39,44 +42,43 @@ class PexelsWallpaperSpecResolver:
 
   @override
   def resolve(self, url: str) -> WallpaperSpec:
-    api_token = os.getenv('PEXELS_TOKEN')
-    if not api_token:
-      raise EnvironmentError('PEXELS_TOKEN is not set.')
-
-    name, photo_id = self._regex.match(url).groups()
-    response = requests.get('https://api.pexels.com/v1/photos/' + photo_id,
-      headers={'Authorization': api_token, 'User-Agent': get_user_agent()})
+    response = requests.get(url, headers={'User-Agent': get_user_agent()})
     response.raise_for_status()
-    data = response.json()
 
-    def _with_filename(height: int, width: int, url: str) -> ImageWithResolution:
-      suffix = urllib.parse.urlsplit(url).path.rpartition('.')[2]
-      filename = '{}-{}-{}.{}'.format(name, width, height, suffix)
-      return ImageWithResolution(height, width, url, filename)
+    soup = bs4.BeautifulSoup(response.text, 'html.parser')
 
     resolutions = []
-    resolutions.append(_with_filename(data['height'], data['width'], data['src']['original']))
+    node = soup.find('div', {'class': 'block-download__resolutions--6'})
+    for item in node.find_all('p'):
+      name = item.find('span').text
+      res = item.find('a').text
+      width, height = res.lower().partition('x')[::2]
+      image_url = urllib.parse.urljoin(url, item.find('a')['href'])
+      resolutions.append(ImageWithResolution(
+        int(height), int(width), image_url, posixpath.basename(image_url)))
 
-    for key, url in data['src'].items():
-      if key == 'original':
-        continue
-      query_params = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)
-      dpr = int(query_params.get('dpr', [1])[0])
-      height = int(query_params['h'][0]) * dpr
-      if 'w' in query_params:
-        width = int(query_params['w'][0]) * dpr
+    tags = soup.find('p', {'class': 'tags'}).find_all('a')
+    tags = (x.text.lower().strip() for x in tags)
+    tags = list(set(tags) - self._bad_keywords)
+
+    author = soup.find('p', {'class': 'author'}).find_all('a')[-1]
+
+    # Sanitize the name, removing any of the bad keywords.
+    name = self._regex.match(url).group(1).lower()
+    for keyword in self._bad_keywords:
+      if '-' + keyword in name:
+        name = name.replace('-' + keyword, '')
       else:
-        width = int(round(height / data['height'] * data['width']))
-      resolutions.append(_with_filename(height, width, url))
+        name = name.replace(keyword + '-', '')
 
     return WallpaperSpec(
       name=name,
-      keywords=[],
-      source_url=data['url'],
+      keywords=tags,
+      source_url=url,
       credit=ImageCredit(
-        text='This Photo was taken by {} on Pexels.'.format(data['photographer']),
-        author_url=data['photographer_url'],
-        author=data['photographer'],
+        text='Uploaded by {} on WallpapersHome'.format(author.text),
+        author_url=urllib.parse.urljoin(url, author['href']),
+        author=author.text,
       ),
       resolutions=resolutions,
     )

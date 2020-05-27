@@ -5,6 +5,7 @@ license: "MIT"
 description: "Package description here."
 requirements:
   - python ^3.4
+  - beautifulsoup4 ^4.9.1
   - click ^7.1.2
   - nr.databind.core ~0.0.14
   - nr.databind.json ~0.0.9
@@ -15,5 +16,6 @@ requirements:
 entrypoints:
   an_image_a_day.resolvers:
     - pexels = an_image_a_day.resolvers.pexels:PexelsWallpaperSpecResolver
+    - wallpapershome = an_image_a_day.resolvers.wallpapershome:WallpapersHomeSpecResolver
   console_scripts:
     - an-image-a-day = an_image_a_day.__main__:cli

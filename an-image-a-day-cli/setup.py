@@ -12,7 +12,7 @@ with io.open('src/an_image_a_day/__init__.py', encoding='utf8') as fp:
 with io.open('README.md', encoding='utf8') as fp:
   long_description = fp.read()
 
-requirements = ['click >=7.1.2,<8.0.0', 'nr.databind.core >=0.0.14,<0.1.0', 'nr.databind.json >=0.0.9,<0.1.0', 'nr.interface >=0.0.2,<0.1.0', 'nr.proxy >=0.0.2,<0.1.0', 'requests >=2.23.0,<3.0.0', 'termcolor >=1.1.0,<2.0.0']
+requirements = ['beautifulsoup4 >=4.9.1,<5.0.0', 'click >=7.1.2,<8.0.0', 'nr.databind.core >=0.0.14,<0.1.0', 'nr.databind.json >=0.0.9,<0.1.0', 'nr.interface >=0.0.2,<0.1.0', 'nr.proxy >=0.0.2,<0.1.0', 'requests >=2.23.0,<3.0.0', 'termcolor >=1.1.0,<2.0.0']
 
 setuptools.setup(
   name = 'an-image-a-day',
@@ -35,6 +35,7 @@ setuptools.setup(
   entry_points = {
     'an_image_a_day.resolvers': [
       'pexels = an_image_a_day.resolvers.pexels:PexelsWallpaperSpecResolver',
+      'wallpapershome = an_image_a_day.resolvers.wallpapershome:WallpapersHomeSpecResolver',
     ],
     'console_scripts': [
       'an-image-a-day = an_image_a_day.__main__:cli',
