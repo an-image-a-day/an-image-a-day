@@ -61,7 +61,20 @@ class WallpapersHomeSpecResolver:
     tags = (x.text.lower().strip() for x in tags)
     tags = list(set(tags) - self._bad_keywords)
 
-    author = soup.find('p', {'class': 'author'}).find_all('a')[-1]
+    author_parent = soup.find('p', {'class': 'author'})
+    if '|' in author_parent.text:
+      author, uploader = author_parent.find_all('a')
+    else:
+      author = None
+      uploader, = author_parent.find_all('a')
+
+    credit = ImageCredit(
+      text='Uploaded by {} on WallpapersHome'.format(uploader.text),
+      author_url=urllib.parse.urljoin(url, (author or uploader)['href']),
+      author=(author or uploader).text,
+    )
+    if author:
+      credit.text = '© ' + author.text + ' | ' + credit.text
 
     # Sanitize the name, removing any of the bad keywords.
     name = self._regex.match(url).group(1).lower()
@@ -75,10 +88,6 @@ class WallpapersHomeSpecResolver:
       name=name,
       keywords=tags,
       source_url=url,
-      credit=ImageCredit(
-        text='Uploaded by {} on WallpapersHome'.format(author.text),
-        author_url=urllib.parse.urljoin(url, author['href']),
-        author=author.text,
-      ),
+      credit=credit,
       resolutions=resolutions,
     )
