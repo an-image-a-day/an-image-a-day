@@ -1,0 +1,96 @@
+{
+  "name": "abstract-art-background-blur",
+  "keywords": [
+    "lights",
+    "blurry",
+    "bokeh"
+  ],
+  "source_url": "https://www.pexels.com/photo/abstract-art-background-blur-564908/",
+  "credit": {
+    "text": "This Photo was taken by Adrianna Calvo on Pexels.",
+    "author": "Adrianna Calvo",
+    "author_url": "https://www.pexels.com/@adriannaca"
+  },
+  "resolutions": [
+    {
+      "height": 3648,
+      "width": 5472,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg",
+      "filename": "abstract-art-background-blur-5472-3648.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "abstract-art-background-blur-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "abstract-art-background-blur-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "abstract-art-background-blur-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "abstract-art-background-blur-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 525,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "abstract-art-background-blur-525-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "abstract-art-background-blur-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "abstract-art-background-blur-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "abstract-art-background-blur-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 3648,
+      "width": 5472,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg",
+      "filename": "abstract-art-background-blur-5472-3648.jpeg"
+    },
+    "2K": {
+      "height": 3648,
+      "width": 5472,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg",
+      "filename": "abstract-art-background-blur-5472-3648.jpeg"
+    },
+    "4K": {
+      "height": 3648,
+      "width": 5472,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg",
+      "filename": "abstract-art-background-blur-5472-3648.jpeg"
+    },
+    "5K": {
+      "height": 3648,
+      "width": 5472,
+      "image_url": "https://images.pexels.com/photos/564908/pexels-photo-564908.jpeg",
+      "filename": "abstract-art-background-blur-5472-3648.jpeg"
+    }
+  }
+}
