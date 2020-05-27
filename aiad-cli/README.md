@@ -1,11 +1,11 @@
-# an-image-a-day-cli
+# aiad-cli
 
 CLI to help generating wallpaper JSON records from URLs.
 
 __Synopsis__
 
 ```
-Usage: an-image-a-day [OPTIONS] COMMAND [ARGS]...
+Usage: aiad-cli [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
@@ -29,11 +29,11 @@ Create a Python 3 virtual environment:
 
 Install the CLI into that environment:
 
-    $ pip install -e ./an-image-a-day-cli
+    $ pip install -e ./aiad-cli
 
 Use the CLI from the project root directory to save wallpaper specs into the database:
 
-    $ an-image-a-day save https://www.pexels.com/photo/4k-wallpaper-android-wallpaper-astro-astrology-1146134/ \
+    $ aiad-cli save https://www.pexels.com/photo/4k-wallpaper-android-wallpaper-astro-astrology-1146134/ \
         --keywords sky,night,stars
 
 ### Supported URLs
