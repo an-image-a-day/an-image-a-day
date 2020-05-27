@@ -83,7 +83,7 @@ CRONTAB="$CRONTAB
 $SCHEDULE $CRON_COMMAND"
 echo "$CRONTAB" | crontab
 
-echo "Run downloader now ..."
+echo "Runing downloader now ..."
 bash -c "$CRON_COMMAND"
 
 echo "Done."
