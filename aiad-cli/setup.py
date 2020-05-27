@@ -35,6 +35,7 @@ setuptools.setup(
   entry_points = {
     'aiad_cli.resolvers': [
       'pexels = aiad_cli.resolvers.pexels:PexelsWallpaperSpecResolver',
+      'unsplash = aiad_cli.resolvers.unsplash:UnsplashWallpaperSpecResolver',
       'wallpapershome = aiad_cli.resolvers.wallpapershome:WallpapersHomeSpecResolver',
     ],
     'console_scripts': [
