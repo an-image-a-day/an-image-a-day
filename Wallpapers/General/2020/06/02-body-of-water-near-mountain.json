@@ -1,0 +1,96 @@
+{
+  "name": "body-of-water-near-mountain",
+  "keywords": [
+    "nature",
+    "mountains",
+    "water"
+  ],
+  "source_url": "https://www.pexels.com/photo/body-of-water-near-mountain-1529381/",
+  "credit": {
+    "text": "This Photo was taken by Vlad Che\u021ban on Pexels.",
+    "author": "Vlad Che\u021ban",
+    "author_url": "https://www.pexels.com/@chetanvlad"
+  },
+  "resolutions": [
+    {
+      "height": 4000,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg",
+      "filename": "body-of-water-near-mountain-6000-4000.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "body-of-water-near-mountain-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "body-of-water-near-mountain-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "body-of-water-near-mountain-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "body-of-water-near-mountain-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 525,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "body-of-water-near-mountain-525-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "body-of-water-near-mountain-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "body-of-water-near-mountain-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "body-of-water-near-mountain-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 4000,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg",
+      "filename": "body-of-water-near-mountain-6000-4000.jpeg"
+    },
+    "2K": {
+      "height": 4000,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg",
+      "filename": "body-of-water-near-mountain-6000-4000.jpeg"
+    },
+    "4K": {
+      "height": 4000,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg",
+      "filename": "body-of-water-near-mountain-6000-4000.jpeg"
+    },
+    "5K": {
+      "height": 4000,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1529381/pexels-photo-1529381.jpeg",
+      "filename": "body-of-water-near-mountain-6000-4000.jpeg"
+    }
+  }
+}

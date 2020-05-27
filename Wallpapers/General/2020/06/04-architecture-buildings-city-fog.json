@@ -1,0 +1,95 @@
+{
+  "name": "architecture-buildings-city-fog",
+  "keywords": [
+    "city",
+    "architecture"
+  ],
+  "source_url": "https://www.pexels.com/photo/architecture-buildings-city-fog-373965/",
+  "credit": {
+    "text": "This Photo was taken by Burst on Pexels.",
+    "author": "Burst",
+    "author_url": "https://www.pexels.com/@burst"
+  },
+  "resolutions": [
+    {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg",
+      "filename": "architecture-buildings-city-fog-5760-3840.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "architecture-buildings-city-fog-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "architecture-buildings-city-fog-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "architecture-buildings-city-fog-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "architecture-buildings-city-fog-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 525,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "architecture-buildings-city-fog-525-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "architecture-buildings-city-fog-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "architecture-buildings-city-fog-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "architecture-buildings-city-fog-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg",
+      "filename": "architecture-buildings-city-fog-5760-3840.jpeg"
+    },
+    "2K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg",
+      "filename": "architecture-buildings-city-fog-5760-3840.jpeg"
+    },
+    "4K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg",
+      "filename": "architecture-buildings-city-fog-5760-3840.jpeg"
+    },
+    "5K": {
+      "height": 3840,
+      "width": 5760,
+      "image_url": "https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg",
+      "filename": "architecture-buildings-city-fog-5760-3840.jpeg"
+    }
+  }
+}

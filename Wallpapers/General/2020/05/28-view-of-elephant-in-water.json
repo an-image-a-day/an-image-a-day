@@ -1,0 +1,83 @@
+{
+  "name": "view-of-elephant-in-water",
+  "keywords": [
+    "animals",
+    "nature"
+  ],
+  "source_url": "https://www.pexels.com/photo/view-of-elephant-in-water-247431/",
+  "credit": {
+    "text": "This Photo was taken by Pixabay on Pexels.",
+    "author": "Pixabay",
+    "author_url": "https://www.pexels.com/@pixabay"
+  },
+  "resolutions": [
+    {
+      "height": 2388,
+      "width": 3500,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg",
+      "filename": "view-of-elephant-in-water-3500-2388.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "view-of-elephant-in-water-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "view-of-elephant-in-water-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "view-of-elephant-in-water-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "view-of-elephant-in-water-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 513,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "view-of-elephant-in-water-513-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "view-of-elephant-in-water-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 191,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "view-of-elephant-in-water-191-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "view-of-elephant-in-water-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 2388,
+      "width": 3500,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg",
+      "filename": "view-of-elephant-in-water-3500-2388.jpeg"
+    },
+    "2K": {
+      "height": 2388,
+      "width": 3500,
+      "image_url": "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg",
+      "filename": "view-of-elephant-in-water-3500-2388.jpeg"
+    }
+  }
+}

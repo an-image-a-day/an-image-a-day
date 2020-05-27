@@ -1,0 +1,90 @@
+{
+  "name": "northern-lights",
+  "keywords": [
+    "nature",
+    "mountains",
+    "northern lights"
+  ],
+  "source_url": "https://www.pexels.com/photo/northern-lights-1933319/",
+  "credit": {
+    "text": "This Photo was taken by stein egil liland on Pexels.",
+    "author": "stein egil liland",
+    "author_url": "https://www.pexels.com/@therato"
+  },
+  "resolutions": [
+    {
+      "height": 2889,
+      "width": 4774,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg",
+      "filename": "northern-lights-4774-2889.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "northern-lights-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "northern-lights-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "northern-lights-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "northern-lights-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 578,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "northern-lights-578-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "northern-lights-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 215,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "northern-lights-215-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "northern-lights-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 2889,
+      "width": 4774,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg",
+      "filename": "northern-lights-4774-2889.jpeg"
+    },
+    "2K": {
+      "height": 2889,
+      "width": 4774,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg",
+      "filename": "northern-lights-4774-2889.jpeg"
+    },
+    "4K": {
+      "height": 2889,
+      "width": 4774,
+      "image_url": "https://images.pexels.com/photos/1933319/pexels-photo-1933319.jpeg",
+      "filename": "northern-lights-4774-2889.jpeg"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "name": "architectural-design-architecture-buildings-city",
+  "keywords": [
+    "city",
+    "architecture",
+    "sunset"
+  ],
+  "source_url": "https://www.pexels.com/photo/architectural-design-architecture-buildings-city-374811/",
+  "credit": {
+    "text": "This Photo was taken by Burst on Pexels.",
+    "author": "Burst",
+    "author_url": "https://www.pexels.com/@burst"
+  },
+  "resolutions": [
+    {
+      "height": 3456,
+      "width": 5184,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg",
+      "filename": "architectural-design-architecture-buildings-city-5184-3456.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "architectural-design-architecture-buildings-city-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "architectural-design-architecture-buildings-city-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "architectural-design-architecture-buildings-city-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "architectural-design-architecture-buildings-city-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 525,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "architectural-design-architecture-buildings-city-525-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "architectural-design-architecture-buildings-city-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "architectural-design-architecture-buildings-city-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "architectural-design-architecture-buildings-city-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 3456,
+      "width": 5184,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg",
+      "filename": "architectural-design-architecture-buildings-city-5184-3456.jpeg"
+    },
+    "2K": {
+      "height": 3456,
+      "width": 5184,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg",
+      "filename": "architectural-design-architecture-buildings-city-5184-3456.jpeg"
+    },
+    "4K": {
+      "height": 3456,
+      "width": 5184,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg",
+      "filename": "architectural-design-architecture-buildings-city-5184-3456.jpeg"
+    },
+    "5K": {
+      "height": 3456,
+      "width": 5184,
+      "image_url": "https://images.pexels.com/photos/374811/pexels-photo-374811.jpeg",
+      "filename": "architectural-design-architecture-buildings-city-5184-3456.jpeg"
+    }
+  }
+}

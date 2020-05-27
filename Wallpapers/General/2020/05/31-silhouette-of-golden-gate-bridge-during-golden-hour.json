@@ -1,0 +1,95 @@
+{
+  "name": "silhouette-of-golden-gate-bridge-during-golden-hour",
+  "keywords": [
+    "architecture",
+    "bridge"
+  ],
+  "source_url": "https://www.pexels.com/photo/silhouette-of-golden-gate-bridge-during-golden-hour-1485894/",
+  "credit": {
+    "text": "This Photo was taken by Mohamed Almari on Pexels.",
+    "author": "Mohamed Almari",
+    "author_url": "https://www.pexels.com/@maoriginalphotography"
+  },
+  "resolutions": [
+    {
+      "height": 4002,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-6000-4002.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 525,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-525-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 4002,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-6000-4002.jpeg"
+    },
+    "2K": {
+      "height": 4002,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-6000-4002.jpeg"
+    },
+    "4K": {
+      "height": 4002,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-6000-4002.jpeg"
+    },
+    "5K": {
+      "height": 4002,
+      "width": 6000,
+      "image_url": "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg",
+      "filename": "silhouette-of-golden-gate-bridge-during-golden-hour-6000-4002.jpeg"
+    }
+  }
+}
