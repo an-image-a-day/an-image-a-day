@@ -1,7 +1,10 @@
 #!/bin/bash
 #
-# Set up a crontab for fetching the latest daily image from the an-image-a-day
-# Wallpaper database.
+# Installs the fetch.sh script as a Cron job, including all dependencies.
+#
+# 1. Clones the an-image-a-day repository to "~/Pictures/An Image a Day" (or pulls it).
+# 2. Installs the dependencies (Homebrew, jq, git).
+# 3. Installs a job in the crontab for the fetch.sh script.
 
 if ! [[ "$OSTYPE" =~ ^darwin ]]; then
   >&2 echo "error: setup script currently supports OSX only (found: $OSTYPE)"
@@ -27,7 +30,7 @@ while [[ $# -gt 0 ]]; do
       shift; shift
       ;;
     -h|--help)
-      echo "usage: setup.sh [OPTIONS]"
+      echo "usage: install.sh [OPTIONS]"
       echo ""
       echo "options:"
       echo "  -D, --directory       Override the directory. Defaults to \"$DIRECTORY\"."
@@ -45,10 +48,11 @@ done
 CLONE_DIRECTORY="$DIRECTORY/Data"
 CLONE_URL=https://github.com/an-image-a-day/an-image-a-day.git
 
-INSTALL_WITH_BREW=()
-if ! command -v curl >/dev/null; then
-  INSTALL_WITH_BREW+=('curl')
+if ! command -v brew >/dev/null; then
+
 fi
+
+INSTALL_WITH_BREW=()
 if ! command -v jq >/dev/null; then
   INSTALL_WITH_BREW+=('jq')
 fi
@@ -75,11 +79,11 @@ CURLPATH="$(dirname `which curl`)"
 GITPATH="$(dirname `which git`)"
 
 echo "Updating crontab ..."
-CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && aiad-downloader/downloader.sh -q -D \"$DIRECTORY\" -c \"$CHANNEL\""
+CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && aiad-downloader/fetch.sh -q -D \"$DIRECTORY\" -c \"$CHANNEL\""
 CRONTAB=$(crontab -l | grep -v an-image-a-day | grep -v aiad-downloader)
 CRONTAB="$CRONTAB
 
-# Registered by an-image-a-day/aiad-downloader/setup.sh
+# Registered by an-image-a-day/aiad-downloader/install.sh
 $SCHEDULE $CRON_COMMAND"
 echo "$CRONTAB" | crontab
 

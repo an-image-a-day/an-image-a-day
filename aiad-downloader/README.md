@@ -1,12 +1,13 @@
-# an-image-a-day-downloader
+# aiad-downloader
 
-Shell script to download a day's image from the an-image-a-day Wallpaper database.
+This directory contains two things:
 
-__Requirements__
+* `fetch.sh` &ndash; A shell script to download the daily image from the [An Image a Day][]
+  repository.
+* `install.sh` &ndash; A shell script to install the `fetch.sh` script as a Cron job including
+  all its dependencies (Homebrew, jq, git).
 
-* Bash
-* cURL
-* jq
+Under all circumstances it is expected that `curl` is already available on your system.
 
 ---
 

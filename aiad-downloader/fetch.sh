@@ -35,7 +35,7 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     -h|--help)
-      echo "usage: downloader.sh [OPTIONS]"
+      echo "usage: fetch.sh [OPTIONS]"
       echo ""
       echo "options:"
       echo "  -h, --help          Show this help message and exit."
