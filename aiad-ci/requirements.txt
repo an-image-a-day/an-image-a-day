@@ -1,4 +1,5 @@
 click >=7.1.1,<8.0.0
+jinja2 >=2.11.2,<3.0.0
 requests >=2.23.0,<3.0.0
 termcolor >=1.1.0,<2.0.0
 -e ../aiad-cli
