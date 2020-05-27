@@ -31,6 +31,8 @@ import pkg_resources
 import sys
 import termcolor
 
+ENV_FILE = os.path.expanduser('~/.config/aiad-cli.env')
+
 
 def make_db(channel: str) -> WallpapersDatabase:
   if not os.path.isdir('Wallpapers'):
@@ -50,7 +52,12 @@ def load_spec(url: str, name: Optional[str], keywords: Optional[str]) -> Wallpap
 
 @click.group()
 def cli():
-  ...
+  if os.path.isfile(ENV_FILE):
+    with open(ENV_FILE) as fp:
+      for line in fp:
+        if '=' in line:
+          key, value = line.partition('=')[::2]
+          os.environ[key.strip()] = value.strip()
 
 
 @cli.command('save')
