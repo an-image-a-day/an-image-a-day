@@ -4,8 +4,6 @@
 name: Validate Wallpaper Specs
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
