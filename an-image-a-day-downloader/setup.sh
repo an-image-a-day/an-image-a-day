@@ -9,7 +9,7 @@ if ! [[ "$OSTYPE" =~ ^darwin ]]; then
 fi
 
 DIRECTORY=~/Pictures/"An Image a Day"
-SCHEDULE="10 * * * *"
+SCHEDULE="*/10 * * * *"
 CHANNEL=General
 
 while [[ $# -gt 0 ]]; do
@@ -69,13 +69,18 @@ else
   git -C "$CLONE_DIRECTORY" pull -q
 fi
 
+# Ensure that these commands can be found by updating the PATH in the crontab.
+JQPATH="$(dirname `which jq`)"
+CURLPATH="$(dirname `which curl`)"
+GITPATH="$(dirname `which git`)"
+
 echo "Updating crontab ..."
-CRON_COMMAND="cd \"$CLONE_DIRECTORY\" && git pull -q && an-image-a-day-downloader/downloader.sh -D \"$DIRECTORY\" -c \"$CHANNEL\""
+CRON_COMMAND="PATH=\"\$PATH:$JQPATH:$CURLPATH:$GITPATH\" && cd \"$CLONE_DIRECTORY\" && git pull -q && an-image-a-day-downloader/downloader.sh -D \"$DIRECTORY\" -c \"$CHANNEL\""
 CRONTAB=$(crontab -l | grep -v an-image-a-day)
 CRONTAB="$CRONTAB
 
 # Registered by an-image-a-day/an-image-a-day-downloader/setup.sh
-10 * * * * $CRON_COMMAND"
+$SCHEDULE $CRON_COMMAND"
 echo "$CRONTAB" | crontab
 
 echo "Run downloader now ..."
