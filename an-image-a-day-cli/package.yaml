@@ -1,0 +1,18 @@
+name: "an-image-a-day"
+version: "0.0.1"
+author: "Niklas Rosenstein <rosensteinniklas@gmail.com>"
+license: "MIT"
+description: "Package description here."
+requirements:
+  - python ^3.4
+  - click ^7.1.2
+  - nr.databind.core ~0.0.14
+  - nr.databind.json ~0.0.9
+  - nr.interface ~0.0.2
+  - nr.proxy ~0.0.2
+  - requests ^2.23.0
+entrypoints:
+  an_image_a_day.resolvers:
+    - pexels = an_image_a_day.resolvers.pexels:PexelsWallpaperSpecResolver
+  console_scripts:
+    - an-image-a-day = an_image_a_day.__main__:cli
