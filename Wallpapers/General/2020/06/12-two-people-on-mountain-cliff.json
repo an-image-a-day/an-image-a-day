@@ -1,0 +1,92 @@
+{
+  "name": "two-people-on-mountain-cliff",
+  "keywords": [
+    "nature",
+    "mountain",
+    "cliff",
+    "fog",
+    "water"
+  ],
+  "source_url": "https://www.pexels.com/photo/two-people-on-mountain-cliff-1647962/",
+  "credit": {
+    "text": "This Photo was taken by Valdemaras D. on Pexels.",
+    "author": "Valdemaras D.",
+    "author_url": "https://www.pexels.com/@valdemaras-d-784301"
+  },
+  "resolutions": [
+    {
+      "height": 2385,
+      "width": 4240,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg",
+      "filename": "two-people-on-mountain-cliff-4240-2385.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "two-people-on-mountain-cliff-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "two-people-on-mountain-cliff-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "two-people-on-mountain-cliff-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "two-people-on-mountain-cliff-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 622,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "two-people-on-mountain-cliff-622-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "two-people-on-mountain-cliff-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 231,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "two-people-on-mountain-cliff-231-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "two-people-on-mountain-cliff-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 2385,
+      "width": 4240,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg",
+      "filename": "two-people-on-mountain-cliff-4240-2385.jpeg"
+    },
+    "2K": {
+      "height": 2385,
+      "width": 4240,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg",
+      "filename": "two-people-on-mountain-cliff-4240-2385.jpeg"
+    },
+    "4K": {
+      "height": 2385,
+      "width": 4240,
+      "image_url": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg",
+      "filename": "two-people-on-mountain-cliff-4240-2385.jpeg"
+    }
+  }
+}
