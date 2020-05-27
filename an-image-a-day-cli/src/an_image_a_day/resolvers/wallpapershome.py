@@ -59,7 +59,7 @@ class WallpapersHomeSpecResolver:
 
     tags = soup.find('p', {'class': 'tags'}).find_all('a')
     tags = (x.text.lower().strip() for x in tags)
-    tags = list(set(tags) - self._bad_keywords)
+    tags = [x for x in tags if sorted(x.split()) == sorted(set(x.split()) - self._bad_keywords)]
 
     author_parent = soup.find('p', {'class': 'author'})
     if '|' in author_parent.text:
