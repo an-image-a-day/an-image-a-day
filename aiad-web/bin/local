@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd "$(dirname $(dirname ${BASH_SOURCE[0]}))"
+export FLASK_DEBUG=true
+export FLASK_APP=aiad_web.main:app
+flask run

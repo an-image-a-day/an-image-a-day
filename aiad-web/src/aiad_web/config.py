@@ -19,5 +19,25 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-__author__ = 'Niklas Rosenstein <rosensteinniklas@gmail.com>'
-__version__ = '0.0.1'
+from nr.databind.core import Field, FieldName, ObjectMapper, Struct
+from nr.databind.json import JsonModule
+import os
+import yaml
+
+MAPPER = ObjectMapper(JsonModule())
+
+
+class Config(Struct):
+  wallpapers = Field({
+    'repository': Field(str),
+    'subdirectory': Field(str, default=None),
+    'update_interval': Field(int, FieldName('update-interval'), default=10),
+  })
+
+  @classmethod
+  def load(cls, filename: str = None) -> 'Config':
+    if not filename:
+      filename = os.getenv('AIAD_WEB_CONFIG_FILENAME') or 'config.yaml'
+    with open(filename) as fp:
+      data = yaml.safe_load(fp)
+    return MAPPER.deserialize(data, cls, filename=filename)
