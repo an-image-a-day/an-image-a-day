@@ -1,0 +1,1 @@
+This directory contains the static files generated via "yarn build" from the src/frontend directory.

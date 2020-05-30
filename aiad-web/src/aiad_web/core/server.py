@@ -19,7 +19,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from nr.interface import Interface, implements, override
+from nr.interface import Interface, default, implements, override
 from typing import Any, Callable, Union
 import flask
 import enum
@@ -29,6 +29,17 @@ import threading
 import time
 
 logger = logging.getLogger(__name__)
+
+
+class IMiddleware(Interface):
+
+  @default
+  def before_request(self):
+    ...
+
+  @default
+  def after_request(self, response):
+    ...
 
 
 class IScheduler(Interface):
@@ -157,15 +168,21 @@ class Server:
     self._tasks_started = False
     self._scheduler_thread = SchedulerThread()
     app.before_request(self._before_request)
+    app.after_request(self._after_request)
 
   def _before_request(self):
     if not self._tasks_started:
       self.start_tasks()
     for middleware in self.middleware:
-      response = middleware()
+      response = middleware.before_request()
       if response is not None:
         return response
     return None
+
+  def _after_request(self, response):
+    for middleware in self.middleware:
+      response = middleware.after_request(response)
+    return response
 
   def start_tasks(self):
     if not self._scheduler_thread.isAlive():
@@ -174,8 +191,8 @@ class Server:
       if task.started_count == 0:
         task.start()
 
-  def add_middleware(self, func: Callable[[], Any]) -> None:
-    self.middleware.append(func)
+  def add_middleware(self, middleware: IMiddleware) -> None:
+    self.middleware.append(middleware)
 
   def add_task(
     self,

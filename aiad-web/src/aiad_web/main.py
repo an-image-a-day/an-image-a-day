@@ -22,29 +22,23 @@
 from .api.wallpapers import IChannelProvider, WallpaperService
 from .app import app
 from .config import Config
-from .core.server import Server
+from .core.server import IMiddleware, Server
 from aiad_cli.database import WallpapersDatabase
 from nr.databind.rest.flask import bind_resource
 from nr.interface import implements, override
 from typing import Iterable, List
+import flask
 import logging
 import os
 import subprocess
 
 
-@implements(IChannelProvider)
+@implements(IChannelProvider, IMiddleware)
 class AiadServer(Server):
 
   def __init__(self, app):
-    print('-'*80)
-    print('AiadServer.__init__()', id(app))
-    print()
     super(AiadServer, self).__init__(app)
     self.config = Config.load()
-    print(self.config)
-    print()
-
-
     bind_resource(
       self.app,
       '/api/v1/wallpapers',
@@ -56,6 +50,7 @@ class AiadServer(Server):
       restart='always',
       restart_cooldown=self.config.wallpapers.update_interval,
     )
+    self.add_middleware(self)
 
   @property
   def wallpapers_repo(self):
@@ -84,6 +79,12 @@ class AiadServer(Server):
   @override
   def get_channel_db(self, channel: str) -> WallpapersDatabase:
     return WallpapersDatabase(os.path.join(self.wallpapers_root, channel))
+
+  @override
+  def after_request(self, response):
+    if os.getenv('FLASK_DEBUG') == 'true':
+      response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 
 if os.getenv('WERKZEUG_RUN_MAIN') == 'true':

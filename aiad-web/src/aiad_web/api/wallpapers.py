@@ -51,7 +51,7 @@ class WallpaperResource(Interface):
   #def get_channel_metadata(self, channel: str) -> ...:
   #  ...
 
-  @Route('GET /channels/{channel}')
+  @Route('GET /channels/{channel}/all')
   def get_wallpapers_for_channel(
     self,
     channel: str,

@@ -1,8 +1,16 @@
 #!/bin/bash
 
-if ! [[ `git remote -v | awk '{print $1}' | grep heroku` =~ ^heroku$ ]]; then
-  git remote add heroku git@heroku.com:an-image-a-day.git
-fi
+set -e
+
+WEB_DIR=$(realpath $(dirname $(dirname ${BASH_SOURCE[0]})))
+cd "$WEB_DIR"
+
+git remote add heroku git@heroku.com:an-image-a-day.git 2>/dev/null || true
+
+pushd "src/frontend" && yarn build && popd
+
+mkdir -p public/
+cp -r "src/frontend/build/*" public/
 
 CURRENT_BRANCH=`git branch | grep \\* | cut -d ' ' -f2`
 git subtree push --prefix aiad-web heroku $CURRENT_BRANCH

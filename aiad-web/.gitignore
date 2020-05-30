@@ -1,6 +1,9 @@
 /.venv/
 /dist
 /build
+/var
+/public/*
+!/public/README.md
 *.py[cod]
 *.egg-info
 *.egg

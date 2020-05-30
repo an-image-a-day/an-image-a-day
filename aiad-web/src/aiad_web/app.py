@@ -20,5 +20,6 @@
 # IN THE SOFTWARE.
 
 import flask
+import os
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, static_url_path='', static_folder=os.path.abspath('public'))
