@@ -19,7 +19,31 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+from .config import Config
+from .api.wallpapers import WallpaperSourceManager, WallpaperService
+from nr.databind.rest.flask import bind_resource
+from nr.utils.flask.tasks import TaskManager
 import flask
+import logging
 import os
 
+config = Config.load()
 app = flask.Flask(__name__, static_url_path='', static_folder=os.path.abspath('public'))
+tasks = TaskManager()
+wallpapers = WallpaperSourceManager(config.wallpapers)
+
+tasks.register_task(
+  'wallpaper-updater',
+  wallpapers.update,
+  restart='always',
+  restart_cooldown=config.wallpapers.update_interval)
+
+bind_resource(
+  app,
+  '/api/v1/wallpapers',
+  WallpaperService(wallpapers),
+)
+
+if os.getenv('WERKZEUG_RUN_MAIN') == 'true' or os.getenv('ENVIRONMENT') == 'prod':
+  logging.basicConfig(format='[%(asctime)s - %(levelname)s]: %(message)s', level=logging.INFO)
+  tasks.start()

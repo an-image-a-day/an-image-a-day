@@ -21,13 +21,18 @@
 
 from aiad_cli.core import WallpaperSpec
 from aiad_cli.database import WallpapersDatabase
+from aiad_web.config import WallpaperSourceConfig
 from nr.databind.core import make_struct
 from nr.databind.rest import NotFound, Page, Route, RouteParam, RouteResult, RouteReturn
-from nr.interface import Interface, implements
-from typing import List
+from nr.interface import Interface, implements, override
+from typing import Iterable, List
 import datetime
+import logging
+import os
+import subprocess
 
 
+logger = logging.getLogger(__name__)
 WallpaperSpecPageItem = make_struct('Item', {"date": datetime.date, "wallpaper": WallpaperSpec})
 WallpaperSpecPage = Page[WallpaperSpecPageItem, datetime.date]
 
@@ -83,6 +88,44 @@ class WallpaperResource(Interface):
     raw: RouteParam.Query(bool) = False,
   ) -> str:
     ...
+
+
+@implements(IChannelProvider)
+class WallpaperSourceManager:
+
+  def __init__(self, config: WallpaperSourceConfig):
+    self.config = config
+
+  @property
+  def repo_directory(self) -> str:
+    return os.path.join('var', 'data', 'wallpapers')
+
+  @property
+  def channels_directory(self) -> str:
+    return os.path.join(self.repo_directory, self.config.subdirectory)
+
+  def update(self) -> None:
+    if os.path.isdir(self.repo_directory):
+      command = ['git', 'pull']
+      cwd = self.repo_directory
+    else:
+      os.makedirs(os.path.dirname(self.repo_directory), exist_ok=True)
+      command = ['git', 'clone', self.config.repository, self.repo_directory]
+      cwd = None
+    proc = subprocess.Popen(command, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    output = proc.communicate()[0].decode().rstrip()
+    if proc.returncode != 0:
+      logger.error('Error when updating wallpaper source repository. Output:\n%s', output)
+
+  @override
+  def get_channels(self) -> Iterable[str]:
+    for name in os.listdir(self.wallpapers_root):
+      if os.path.isdir(os.path.join(self.channels_directory, name)):
+        yield name
+
+  @override
+  def get_channel_db(self, channel: str) -> WallpapersDatabase:
+    return WallpapersDatabase(os.path.join(self.channels_directory, channel))
 
 
 @implements(WallpaperResource)

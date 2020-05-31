@@ -1,6 +1,27 @@
 #!/bin/bash
 
 cd "$(dirname $(dirname ${BASH_SOURCE[0]}))"
-export FLASK_DEBUG=true
-export FLASK_APP=aiad_web.main:app
-flask run
+export FLASK_APP=aiad_web.app:app
+export ENVIRONMENT=prod
+COMMAND="flask run"
+
+while [ $# != 0 ]; do
+  case $1 in
+    -g|--gunicorn)
+      export ENVIRONMENT=prod
+      COMMAND="gunicorn $FLASK_APP -w 1"
+      shift
+      ;;
+    -d|--debug)
+      export ENVIRONMENT=dev
+      export FLASK_DEBUG=true
+      shift
+      ;;
+    *)
+      >&2 echo "error: unknown argument $1"
+      exit 1
+      ;;
+  esac
+done
+
+eval $COMMAND

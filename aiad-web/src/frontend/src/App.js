@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let base_url = process.env.AIAD_WEB_BACKEND_URL || 'http://localhost:5000';
+    let base_url = process.env.AIAD_WEB_BACKEND_URL || '';
     fetch(base_url + '/api/v1/wallpapers/channels/General/all')
     .then(res => res.json())
     .then(data => {

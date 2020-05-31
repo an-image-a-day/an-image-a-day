@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: aiad-web/Dockerfile.backend
+    environment:
+      AIAD_WEB_HOST: backend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 8000:80
+    links:
+      - backend

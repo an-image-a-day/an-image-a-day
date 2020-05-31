@@ -1,0 +1,11 @@
+FROM python
+
+RUN apt-get update && apt-get install git -y && apt-get clean
+
+RUN mkdir -p /app
+COPY aiad-cli/ /app/aiad-cli
+COPY aiad-web/requirements.txt aiad-web/setup.py /app/aiad-web/
+COPY aiad-web/src/aiad_web /app/aiad-web/src/aiad_web
+RUN cd /app/aiad-web && pip install -r requirements.txt pyinvoke
+COPY aiad-web/config.yaml /app/aiad-web/config.yaml
+CMD cd /app/aiad-web && ENVIRONMENT=prod gunicorn aiad_web.app:app -w 1 -b 0.0.0.0:8000

@@ -6,5 +6,7 @@ description: "Web API and page for An Image a Day."
 requirements:
   - python ^3.4
   - flask ^1.1.2
-  - nr.databind.rest 0.0.1
+  - nr.databind.core 0.0.15
+  - nr.databind.rest 0.0.2
+  - nr.utils.flask 0.0.1
   - pyyaml

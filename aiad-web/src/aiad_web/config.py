@@ -27,12 +27,14 @@ import yaml
 MAPPER = ObjectMapper(JsonModule())
 
 
+class WallpaperSourceConfig(Struct):
+  repository = Field(str)
+  subdirectory = Field(str, default=None)
+  update_interval = Field(int, FieldName('update-interval'), default=10)
+
+
 class Config(Struct):
-  wallpapers = Field({
-    'repository': Field(str),
-    'subdirectory': Field(str, default=None),
-    'update_interval': Field(int, FieldName('update-interval'), default=10),
-  })
+  wallpapers = Field(WallpaperSourceConfig)
 
   @classmethod
   def load(cls, filename: str = None) -> 'Config':

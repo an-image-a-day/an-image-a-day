@@ -1,0 +1,9 @@
+FROM node AS frontend
+RUN mkdir -p /project
+COPY src/frontend/package.json /project/package.json
+RUN cd /project && yarn install
+COPY src/frontend /project
+RUN cd /project && yarn build
+
+FROM nginx
+COPY --from=frontend /project/build /var/www/html
