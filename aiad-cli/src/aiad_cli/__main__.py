@@ -26,12 +26,17 @@ from nr.proxy import Proxy
 from typing import Optional
 import click
 import datetime
+import logging
 import os
 import pkg_resources
 import sys
 import termcolor
 
 ENV_FILE = os.path.expanduser('~/.config/aiad-cli.env')
+
+
+def parse_date(s: str) -> datetime.date:
+  return datetime.datetime.strptime(s, '%Y-%m-%d').date()
 
 
 def make_db(channel: str) -> WallpapersDatabase:
@@ -51,7 +56,17 @@ def load_spec(url: str, name: Optional[str], keywords: Optional[str]) -> Wallpap
 
 
 @click.group()
-def cli():
+@click.option('-v', '--verbose', is_flag=True)
+@click.option('-q', '--quiet', is_flag=True)
+def cli(verbose, quiet):
+  if verbose:
+    level = logging.INFO
+  elif quiet:
+    level = logging.ERROR
+  else:
+    level = logging.WARN
+  logging.basicConfig(format='[%(levelname)s]: %(message)s', level=level)
+
   if os.path.isfile(ENV_FILE):
     with open(ENV_FILE) as fp:
       for line in fp:
@@ -65,7 +80,9 @@ def cli():
 @click.option('-c', '--channel', default='General', help='The database channel. Defaults to "General".')
 @click.option('-n', '--name', help='Override the wallpaper name.')
 @click.option('-k', '--keywords', help='Override the wallpaper keywords with a comma-separated list.')
-def _cli_save(url, channel, name, keywords):
+@click.option('-d', '--date', type=parse_date, help='Specify the date for which to save the wallpaper.')
+@click.option('-f', '--force', is_flag=True, help='Force save if the image for the day already exists.')
+def _cli_save(url, channel, name, keywords, date, force):
   """
   Resolve a URL and save it as the next daily wallpaper.
   """
@@ -73,16 +90,24 @@ def _cli_save(url, channel, name, keywords):
   db = Proxy(lambda: make_db(channel), lazy=True)
   spec = Proxy(lambda: load_spec(url, name, keywords), lazy=True)
 
-  date = next(db.all(reverse=True), None)
-  if date:
-    date = date + datetime.timedelta(days=1)
-  else:
-    date = datetime.date.today()
+  if not date:
+    date = next(db.all(reverse=True), None)
+    if date:
+      date = date + datetime.timedelta(days=1)
+    else:
+      date = datetime.date.today()
+
+  if db.exists(date):
+    if not force:
+      sys.exit('error: wallpaper for date "{}" already exists.'.format(date))
+    filename = db.delete(date)
+    print('Deleted', termcolor.colored(os.path.relpath(filename), 'red'))
 
   if not spec.name:
     sys.exit('error: resolved wallpaper spec has no name, please specify -n,--name')
   if not spec.keywords:
     sys.exit('error: resolved wallpaper spec has no keywords, please specify -k,--keywords')
+
   filename = db.save(date, spec)
   print('Saved to', termcolor.colored(os.path.relpath(filename), 'cyan'))
 

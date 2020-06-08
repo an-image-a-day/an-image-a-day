@@ -114,7 +114,7 @@ class WallpapersDatabase:
         for curr_day in _sort(self.days(curr_year, curr_month)):
           yield datetime.date(curr_year, curr_month, curr_day)
 
-  def load(self, date: datetime.date) -> WallpaperSpec:
+  def _get_filename_for_day(self, date: datetime.date) -> str:
     directory = os.path.join(self.directory, '{:0>2}'.format(date.year), '{:0>2}'.format(date.month))
     formatted = '{:0>2}'.format(date.day)
     for name in os.listdir(directory):
@@ -122,7 +122,17 @@ class WallpapersDatabase:
         break
     else:
       raise DateNotFoundError(date)
-    filename = os.path.join(directory, name)
+    return os.path.join(directory, name)
+
+  def exists(self, date: datetime.date) -> bool:
+    try:
+      self._get_filename_for_day(date)
+      return True
+    except DateNotFoundError:
+      return False
+
+  def load(self, date: datetime.date) -> WallpaperSpec:
+    filename = self._get_filename_for_day(date)
     return WallpaperSpec.from_json(filename)
 
   def save(self, date: datetime.date, spec: WallpaperSpec) -> str:
@@ -133,4 +143,9 @@ class WallpapersDatabase:
     filename += '.json'
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     spec.to_json(filename, indent=2)
+    return filename
+
+  def delete(self, date: datetime.date) -> str:
+    filename = self._get_filename_for_day(date)
+    os.remove(filename)
     return filename
