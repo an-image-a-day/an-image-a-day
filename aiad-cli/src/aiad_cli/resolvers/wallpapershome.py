@@ -23,11 +23,14 @@ from aiad_cli.core import ImageCredit, ImageWithResolution, IWallpaperSpecResolv
 from aiad_cli.utils import get_user_agent
 from nr.interface import implements, override
 import bs4
+import logging
 import os
 import posixpath
 import re
 import requests
 import urllib.parse
+
+logger = logging.getLogger(__name__)
 
 
 @implements(IWallpaperSpecResolver)
@@ -48,14 +51,26 @@ class WallpapersHomeSpecResolver:
     soup = bs4.BeautifulSoup(response.text, 'html.parser')
 
     resolutions = []
+    broken_resolutions = []
     node = soup.find('div', {'class': 'block-download__resolutions--6'})
     for item in node.find_all('p'):
       name = item.find('span').text
       res = item.find('a').text
       width, height = res.lower().partition('x')[::2]
       image_url = urllib.parse.urljoin(url, item.find('a')['href'])
+
+      # Test if the URL is valid. Often times WP-Home download links are broken and
+      # instead redirect to /wallpapers/.
+      response = requests.head(image_url, allow_redirects=False)
+      if response.status_code != 200 or not response.headers.get('Content-type').startswith('image/'):
+        logger.warning('Download link for resolution %s is broken (%s).', name, response.status_code)
+        continue
+
       resolutions.append(ImageWithResolution(
         int(height), int(width), image_url, posixpath.basename(image_url)))
+
+    if not resolutions:
+      raise ValueError('all download links are broken')
 
     tags = soup.find('p', {'class': 'tags'}).find_all('a')
     tags = (x.text.lower().strip() for x in tags)
