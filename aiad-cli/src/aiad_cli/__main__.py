@@ -112,6 +112,25 @@ def _cli_save(url, channel, name, keywords, date, force):
   print('Saved to', termcolor.colored(os.path.relpath(filename), 'cyan'))
 
 
+@cli.command('resave')
+@click.argument('dates', nargs=-1, type=parse_date)
+@click.option('-c', '--channel', default='General', help='The database channel. Defaults to "General".')
+def _cli_resave(dates, channel):
+  """
+  Re-save the Wallpaper specs for the specified dates.
+  """
+
+  db = Proxy(lambda: make_db(channel), lazy=True)
+
+  specs_to_reload = []
+  for date in dates:
+    specs_to_reload.append((date, db.load(date)))
+
+  for date, spec in specs_to_reload:
+    spec = load_spec(spec.source_url, spec.name, ','.join(spec.keywords))
+    db.save(date, spec)
+
+
 @cli.command('resolve')
 @click.argument('url')
 def _cli_resolve(url):
