@@ -52,12 +52,16 @@ class UnsplashWallpaperSpecResolver:
     name = data['alt_description']
 
     def _with_filename(height: int, width: int, url: str) -> ImageWithResolution:
-      suffix = urllib.parse.urlsplit(url).path.rpartition('.')[2]
-      filename = '{}-{}-{}.{}'.format(re.sub(r'\s+', '-', name), width, height, suffix)
+      headers = requests.head(url, headers={'User-Agent': get_user_agent()}).headers
+      content_type = headers['Content-Type']
+      if not content_type.startswith('image/'):
+        raise RuntimeError('unexpected non-image content-type: {!r}'.format(content_type))
+      suffix = content_type.lstrip('image/')
+      filename = '{}-{}-{}.{}'.format(re.sub(r'[\s,\.]+', '-', name), width, height, suffix)
       return ImageWithResolution(height, width, url, filename)
 
     resolutions = []
-    resolutions.append(_with_filename(data['height'], data['width'], data['urls']['raw']))
+    #resolutions.append(_with_filename(data['height'], data['width'], data['urls']['raw']))
 
     for key, url in data['urls'].items():
       if key == 'raw':
