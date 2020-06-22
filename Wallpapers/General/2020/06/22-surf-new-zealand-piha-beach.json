@@ -1,0 +1,67 @@
+{
+  "name": "surf-new-zealand-piha-beach",
+  "keywords": [
+    "ocean",
+    "surf",
+    "wave",
+    "new-zealand"
+  ],
+  "source_url": "https://unsplash.com/photos/u6ZtzsHxMic",
+  "credit": {
+    "text": "This Photo was taken by Tim Marshall on Unsplash.",
+    "author": "Tim Marshall",
+    "author_url": "https://unsplash.com/@timmarshall"
+  },
+  "resolutions": [
+    {
+      "height": 3253,
+      "width": 4880,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-4880-3253.jpeg"
+    },
+    {
+      "height": 720,
+      "width": 1080,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-1080-720.jpeg"
+    },
+    {
+      "height": 267,
+      "width": 400,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-400-267.jpeg"
+    },
+    {
+      "height": 133,
+      "width": 200,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-200-133.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 3253,
+      "width": 4880,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-4880-3253.jpeg"
+    },
+    "FHD": {
+      "height": 3253,
+      "width": 4880,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-4880-3253.jpeg"
+    },
+    "2K": {
+      "height": 3253,
+      "width": 4880,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-4880-3253.jpeg"
+    },
+    "4K": {
+      "height": 3253,
+      "width": 4880,
+      "image_url": "https://images.unsplash.com/photo-1474693220100-7cddec4346f6?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "surfer-surfing-on-tidal-wave-4880-3253.jpeg"
+    }
+  }
+}

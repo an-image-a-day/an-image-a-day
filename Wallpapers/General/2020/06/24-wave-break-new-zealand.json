@@ -1,0 +1,72 @@
+{
+  "name": "wave-break-new-zealand",
+  "keywords": [
+    "ocean",
+    "wave",
+    "new-zealand"
+  ],
+  "source_url": "https://unsplash.com/photos/yEOCA6oiVqg",
+  "credit": {
+    "text": "This Photo was taken by Tim Marshall on Unsplash.",
+    "author": "Tim Marshall",
+    "author_url": "https://unsplash.com/@timmarshall"
+  },
+  "resolutions": [
+    {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    },
+    {
+      "height": 608,
+      "width": 1080,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-1080-608.jpeg"
+    },
+    {
+      "height": 225,
+      "width": 400,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-400-225.jpeg"
+    },
+    {
+      "height": 112,
+      "width": 200,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-200-112.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    },
+    "FHD": {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    },
+    "2K": {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    },
+    "4K": {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    },
+    "5K": {
+      "height": 2916,
+      "width": 5184,
+      "image_url": "https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjEzNzkzM30",
+      "filename": "ocean-wave-under-cloudy-sky-5184-2916.jpeg"
+    }
+  }
+}
