@@ -1,0 +1,89 @@
+{
+  "name": "dried-lava",
+  "keywords": [
+    "nature",
+    "lava"
+  ],
+  "source_url": "https://www.pexels.com/photo/photo-of-dried-lava-983200/",
+  "credit": {
+    "text": "This Photo was taken by Phil Kallahar on Pexels.",
+    "author": "Phil Kallahar",
+    "author_url": "https://www.pexels.com/@philkallahar"
+  },
+  "resolutions": [
+    {
+      "height": 2160,
+      "width": 3840,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg",
+      "filename": "photo-of-dried-lava-3840-2160.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "photo-of-dried-lava-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "photo-of-dried-lava-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "photo-of-dried-lava-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "photo-of-dried-lava-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 622,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "photo-of-dried-lava-622-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "photo-of-dried-lava-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 231,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "photo-of-dried-lava-231-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "photo-of-dried-lava-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 2160,
+      "width": 3840,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg",
+      "filename": "photo-of-dried-lava-3840-2160.jpeg"
+    },
+    "2K": {
+      "height": 2160,
+      "width": 3840,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg",
+      "filename": "photo-of-dried-lava-3840-2160.jpeg"
+    },
+    "4K": {
+      "height": 2160,
+      "width": 3840,
+      "image_url": "https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg",
+      "filename": "photo-of-dried-lava-3840-2160.jpeg"
+    }
+  }
+}
