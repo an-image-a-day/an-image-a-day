@@ -49,7 +49,7 @@ class UnsplashWallpaperSpecResolver:
       headers={'Authorization': 'Client-ID ' + access_key, 'User-Agent': get_user_agent()})
     response.raise_for_status()
     data = response.json()
-    name = data['alt_description']
+    name = data['alt_description'] or data['description']
 
     def _with_filename(height: int, width: int, url: str) -> ImageWithResolution:
       headers = requests.head(url, headers={'User-Agent': get_user_agent()}).headers
