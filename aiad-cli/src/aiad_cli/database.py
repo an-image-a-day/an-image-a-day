@@ -116,6 +116,8 @@ class WallpapersDatabase:
 
   def _get_filename_for_day(self, date: datetime.date) -> str:
     directory = os.path.join(self.directory, '{:0>2}'.format(date.year), '{:0>2}'.format(date.month))
+    if not os.path.isdir(directory):
+      raise DateNotFoundError(date)
     formatted = '{:0>2}'.format(date.day)
     for name in os.listdir(directory):
       if name == (formatted + '.json') or (name.startswith(formatted + '-') and name.endswith('.json')):
