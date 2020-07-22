@@ -1,0 +1,96 @@
+{
+  "name": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud",
+  "keywords": [
+    "mountains",
+    "nature",
+    "fog"
+  ],
+  "source_url": "https://www.pexels.com/photo/photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-640781/",
+  "credit": {
+    "text": "This Photo was taken by eberhard grossgasteiger on Pexels.",
+    "author": "eberhard grossgasteiger",
+    "author_url": "https://www.pexels.com/@eberhardgross"
+  },
+  "resolutions": [
+    {
+      "height": 3670,
+      "width": 5496,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-5496-3670.jpeg"
+    },
+    {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-1880-1300.jpeg"
+    },
+    {
+      "height": 1200,
+      "width": 800,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-800-1200.jpeg"
+    },
+    {
+      "height": 627,
+      "width": 1200,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-1200-627.jpeg"
+    },
+    {
+      "height": 650,
+      "width": 940,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-940-650.jpeg"
+    },
+    {
+      "height": 350,
+      "width": 524,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-524-350.jpeg"
+    },
+    {
+      "height": 200,
+      "width": 280,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-280-200.jpeg"
+    },
+    {
+      "height": 130,
+      "width": 195,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-195-130.jpeg"
+    }
+  ],
+  "resolution_aliases": {
+    "HD": {
+      "height": 1300,
+      "width": 1880,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-1880-1300.jpeg"
+    },
+    "FHD": {
+      "height": 3670,
+      "width": 5496,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-5496-3670.jpeg"
+    },
+    "2K": {
+      "height": 3670,
+      "width": 5496,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-5496-3670.jpeg"
+    },
+    "4K": {
+      "height": 3670,
+      "width": 5496,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-5496-3670.jpeg"
+    },
+    "5K": {
+      "height": 3670,
+      "width": 5496,
+      "image_url": "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg",
+      "filename": "photo-of-mountain-with-ice-covered-with-black-and-gray-cloud-5496-3670.jpeg"
+    }
+  }
+}
